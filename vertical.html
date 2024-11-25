@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credit Card SVG Example</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+
+    <style>
+        html, body {
+            width: 100%;
+            height: 100%;
+            background: #f3ede2;
+            overflow: hidden;
+            font-family: 'Montserrat', sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        svg {
+            width: 300px;
+            height: 350px;
+            max-height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 600 368">
+        <defs>
+            <mask id="chipMask">
+                <rect width="100%" height="100%" fill="#fff" />
+                <path fill="none" stroke="#000" stroke-width="3" d="M98,133c0,0,4.3,0,7.2,0c2.8,0,3.8,2,3.8,4s-1,6-4,6H89 M109,176.2c0,0,3.5-2.7,3.5-8.7c0-4-4-10-9-10 s-15,0-15,0 M103.5,143.5V156 M136.8,133c0,0-7.3-0.5-7.1,5c0.1,2.6,1.8,5.5,6.3,5.5c5.3-0.1,14.9-0.5,14.9-0.5 M150.4,157.5 c0,0-10.1,0-15.1,0s-9.1,6-9.1,10c0,6,3.5,8.7,3.5,8.7 M135.3,143.5V156" />
+            </mask>
+            <mask id="cardMask">
+                <rect rx="20" ry="20" fill="#fff" width="600" height="368" />
+            </mask>
+        </defs>
+
+        <g mask="url(#cardMask)">
+            <!-- Card Background -->
+            <rect class="bg" fill="#271b13" width="100%" height="100%" />
+            
+            <!-- Decorative Elements -->
+            <g fill="#424d9b">
+                <circle id="orb1" cx="123" cy="410" r="105" />
+                <circle id="orb2" cx="540" cy="45" r="134" />
+            </g>
+            
+            <!-- Chip Representation -->
+            <rect mask="url(#chipMask)" rx="5" ry="5" x="89" y="125" width="61" height="50.2" fill="#f9bb4b" />
+
+            <!-- Company Name in Center -->
+            <g fill="#fff" font-family="'Montserrat', sans-serif" text-anchor="middle">
+                <text x="300" y="184" font-size="26">Kopay</text>
+            </g>
+
+            <!-- Logo -->
+            <g id="logo">
+                <circle class="logoPt" fill="#fff" cx="503" cy="67" r="25" />
+                <circle class="logoPt" fill="none" stroke="#fff" stroke-width="4.5" cx="533" cy="67" r="22.5" />
+            </g>
+        </g>
+    </svg>
+</body>
+</html>
